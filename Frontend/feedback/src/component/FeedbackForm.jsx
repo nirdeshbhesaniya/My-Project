@@ -31,6 +31,11 @@ const FeedbackForm = () => {
       return;
     }
 
+    if(senderEmail === recipientEmail){
+      toast.error("❌ Sender and Recipient email cannot be same.");
+      return;
+    }
+
     setLoading(true);
     setShowResponse(false);
 
