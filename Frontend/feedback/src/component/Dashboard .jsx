@@ -18,7 +18,7 @@ const Dashboard = () => {
 
   const fetchUserFeedbacks = async (email) => {
     try {
-      const res = await fetch(`http://localhost:8000/api/feedback/${email}`);
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/feedback/${email}`);
       if (!res.ok) {
         throw new Error(`HTTP error! Status: ${res.status}`);
       }
