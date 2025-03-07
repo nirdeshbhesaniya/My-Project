@@ -35,7 +35,7 @@ const FeedbackForm = () => {
     setShowResponse(false);
 
     try {
-      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/feedback`, {
+      const res = await fetch("http://localhost:8000/api/feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ senderEmail, recipientEmail, feedback }),
